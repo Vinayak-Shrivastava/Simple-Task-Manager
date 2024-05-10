@@ -9,7 +9,7 @@ const TaskForm = forwardRef( ({reRendertasks},ref)=>{
     
     const [
         tasknameInput,
-        taskCategoryInput,
+        taskPriorityInput,
         HourInput,minutesInput,
         descriptionInput,
         pathInput] =
@@ -18,7 +18,7 @@ const TaskForm = forwardRef( ({reRendertasks},ref)=>{
         
         const task = {
             title: tasknameInput.current.value,
-            category:taskCategoryInput.current.value,
+            priority:taskPriorityInput.current.value,
             dueDate:date,
             time:HourInput.current.value + ":" +  minutesInput.current.value,
             description: descriptionInput.current.value,
@@ -101,15 +101,11 @@ const TaskForm = forwardRef( ({reRendertasks},ref)=>{
                     <input type="text" placeholder="task name" id="task_name_input" ref={tasknameInput}/>
                 </div>
                 <div className="input_con">
-                <span>Category</span>
-                <select id="category_select" className="fa" ref={taskCategoryInput} >
-                    <option className='fa' value="Food"> &nbsp; Food</option>
-                    <option className="fa" value="Map">&nbsp; Map</option>
-                    <option className="fa" value="Meeting"> &nbsp; Meeting</option>
-                    <option className="fa" value="Travel"> &nbsp; Travel</option>
-                    <option className="fa" value="Games"> &nbsp; Games</option>
-                    <option className="fa" value="Sport"> &nbsp; Sport</option>
-                    <option className="fa" value="Other">Other</option>
+                <span>Priority</span>
+                <select id="priority_select" className="fa" ref={taskPriorityInput} >
+                    <option className='fa' value="High Priority"> &nbsp; High</option>
+                    <option className="fa" value="Medium Priority">&nbsp; Medium</option>
+                    <option className="fa" value="Low Priority"> &nbsp; Low</option>
                 </select>
                 
                 </div>

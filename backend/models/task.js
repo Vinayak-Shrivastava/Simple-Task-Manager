@@ -44,7 +44,7 @@ const taskSchema = mongoose.Schema({
         },
         required:true,
     },
-    category:{
+    priority:{
         type:String,
         required:true,
     },

@@ -1,5 +1,5 @@
 import "./Dashboard.css";
-
+import logo_dashboard from "../pics/logo_dashboard.png";
 import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
@@ -24,7 +24,8 @@ export default function Dashboard({index}){
         <>
         <aside id="big_screen">
             <div id="logo_container">
-                <h2>Logo</h2>
+                <img src={logo_dashboard} id="logo"/>
+                
             </div>
             <ul>
                           
@@ -51,7 +52,7 @@ export default function Dashboard({index}){
         </aside>
         <aside id="small_screen" ref={smallAside}>
             <div id="logo_container" onClick={()=>smallAside.current.style.display = "none"}>
-                <h2>Logo</h2>
+            <h2>Logo-Small</h2>
             </div>
             <ul>
                           

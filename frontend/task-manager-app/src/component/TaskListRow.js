@@ -6,16 +6,12 @@ import axios from "axios";
 import { TasksContext } from "./ListView";
 
 export const icons = {
-    Food:<i className="fa-solid fa-utensils" style={{marginRight:"10px"}}></i>,
-    Map:<i className="fa-solid fa-map" style={{marginRight:"10px"}}></i>,
-    Meeting:<i className="fa-solid fa-handshake" style={{marginRight:"10px"}}></i>,
-    Travel:<i className="fa-solid fa-plane-arrival" style={{marginRight:"10px"}}></i>,
-    Games:<i className="fa-solid fa-gamepad" style={{marginRight:"10px"}}></i>,
-    Sport:<i className="fa-solid fa-volleyball" style={{marginRight:"10px"}}></i>,
-    Other:<i className="fa-regular fa-circle-question" style={{marginRight:"10px"}}></i>
+    'High Priority':<i className="fa-solid fa-exclamation-triangle" style={{marginRight:"10px"}}></i>,
+    'Medium Priority':<i className="fa-solid fa-exclamation" style={{marginRight:"10px"}}></i>,
+    'Low Priority':<i className="fa-solid fa-info-circle" style={{marginRight:"10px"}}></i>,
 }
 
-export default function TaskListRow({completed,title,category,dueDate,_id,time,description,path}){
+export default function TaskListRow({completed,title,priority,dueDate,_id,time,description,path}){
     const notification = useContext(NotificationContext);
     const updateTask = useContext(TasksContext);
     const checkDIV = useRef(null);
@@ -98,8 +94,8 @@ export default function TaskListRow({completed,title,category,dueDate,_id,time,d
                             <br></br>
                             <i className="fa-solid fa-diagram-successor"></i>
                             <div style={{marginLeft:"10px"}}>
-                                {icons[category]}
-                                {category}
+                                {icons[priority]}
+                                {priority}
                             </div>
                             <div style={{marginLeft:"10px"}}>
                                 <i className="fa-solid fa-calendar-check" style={{marginRight:"10px"}} ></i>

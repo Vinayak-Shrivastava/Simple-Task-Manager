@@ -1,5 +1,5 @@
 import "./SearchNav.css";
-import logo from "../pics/EL MAHDI BOUZKOURA.jpg";
+import logo from "../pics/logo.png";
 
 
 

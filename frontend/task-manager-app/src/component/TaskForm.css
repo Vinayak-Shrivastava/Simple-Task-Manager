@@ -84,7 +84,7 @@
     padding-left: 10px;
 }
 
-#task_name_input,#category_select{
+#task_name_input,#priority_select{
     background-color: #2b2f33;
     /* color:  black; */
     outline: none;
@@ -97,13 +97,13 @@
     box-shadow: 0 0 2px black;
     
 }
-#category_select {
+#priority_select {
     padding-left: 10px;
 }
 .input_con span{
     margin: 5px 0;
 }
-#category_select{
+#priority_select{
     color: white;
     font-family: 'Lato', 'Font Awesome 5 Free';
     
@@ -196,7 +196,7 @@ textarea{
     display: none;
 }
 
-#task_name_input:focus,#category_select:focus {
+#task_name_input:focus,#priority_select:focus {
     transform: scale(1.02);
     
 
